@@ -1,5 +1,11 @@
-   - name: Configure global attributes.
+---
+- name: Configure global attributes
+  hosts: "{{ _hosts }}"
+  gather_facts: false
+  tasks:
+   - name: Configure Fortinet Firewall Hostname
+     
      fortios_system_global:
-        vdom:  "{{ vdom }}"
+        vdom:  "{{ _vdom | default('root') }}"
         system_global:
-            hostname: 'CustomHostName'
+            hostname: "{{ _hostname }}"
