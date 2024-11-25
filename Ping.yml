@@ -6,7 +6,3 @@
   - name: fetch all firewall addresses
     fortinet.fortios.fortios_configuration_fact:
       selector: firewall_address
-  - name: Ping the Fortinet firewall
-    fortinet.fortios.fortios_configuration_fact:
-      vdom: "root"
-      selector: system_status
