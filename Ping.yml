@@ -1,5 +1,6 @@
 - name: Test connection to Fortinet firewall
   hosts: all
+  connection: httpapi
   gather_facts: false
   tasks:
   - name: fetch all firewall addresses
@@ -9,3 +10,4 @@
     fortinet.fortios.fortios_configuration_fact:
       vdom: "root"
       selector: system_status
+  - name: change local time fortinet firewall
