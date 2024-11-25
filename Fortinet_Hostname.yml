@@ -4,7 +4,7 @@
   gather_facts: false
   tasks:
    - name: Configure Fortinet Firewall Hostname
-     fortios_system_global:
+     fortinet.fortios.fortios_system_global:
         vdom:  "root"
         system_global:
             hostname: "{{ _hostname }}"
