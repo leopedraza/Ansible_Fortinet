@@ -10,4 +10,3 @@
     fortinet.fortios.fortios_configuration_fact:
       vdom: "root"
       selector: system_status
-  - name: change local time fortinet firewall
