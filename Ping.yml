@@ -4,5 +4,5 @@
   tasks:
     - name: Ping the Fortinet firewall
       fortios_system_facts:
-        host: "{{ ansible_host }}"
+        host: "{{ _hosts }}"
         vdom: "root"
