@@ -1,6 +1,7 @@
 ---
 - name: Configure global attributes
   hosts: "{{ _hosts }}"
+  connection: httpapi
   gather_facts: false
   tasks:
    - name: Configure Fortinet Firewall Hostname
