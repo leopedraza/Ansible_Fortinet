@@ -5,6 +5,6 @@
   tasks:
    - name: Configure Fortinet Firewall Hostname
      fortios_system_global:
-        vdom:  "{{ _vdom | default('root') }}"
+        vdom:  "root"
         system_global:
             hostname: "{{ _hostname }}"
