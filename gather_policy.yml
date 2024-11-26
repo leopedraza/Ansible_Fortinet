@@ -1,0 +1,10 @@
+- name: Test connection to Fortinet firewall
+  hosts: all
+  connection: httpapi
+  gather_facts: false
+  tasks:
+  - name: fetch Firewall policy
+    fortinet.fortios.fortios_configuration_fact:
+      selector: firewall_policy
+      params:
+            policyid: 1
