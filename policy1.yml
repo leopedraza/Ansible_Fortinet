@@ -1,6 +1,6 @@
 firewall_policy:
   name: "Allow ssh"
-  policyid: 2001
+  policyid: 1
   srcintf: [{"name": "port1"}]
   dstintf: [{"name": "port1"}]
   srcaddr: [{"name": "all"}]
