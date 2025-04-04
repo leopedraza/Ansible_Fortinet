@@ -1,15 +1,8 @@
----
-- name: Load policy file
-  ansible.builtin.include_vars:
-    file: '{{_policy_file}}.yml'
-    name: policy_data
-
-- name: Configure global attributes
+- name: Aplicar políticas al FortiGate desde Git
   hosts: "{{ _hosts }}"
+  gather_facts: no
   connection: httpapi
-  tasks:
-   - name: Configure Fortinet Firewall Policy
-     fortinet.fortios.fortios_firewall_policy:
-      vdom: root 
-      state: "present"
-      firewall_policy: "{{ policy_data.firewall_policy }}"
+  roles:
+    - role: firewall_policy
+      vars:
+        policy_file: "{{ _policy }}"

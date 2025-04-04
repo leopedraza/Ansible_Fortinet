@@ -1,0 +1,11 @@
+---
+- name: Load policy file
+  include_vars:
+    file: "{{ policy_file }}"
+    name: policy_data
+
+- name: Configure Fortinet Firewall Policy
+  fortinet.fortios.fortios_firewall_policy:
+  vdom: root 
+  state: "present"
+  firewall_policy: "{{ policy_data.firewall_policy }}"
