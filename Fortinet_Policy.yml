@@ -22,3 +22,4 @@
           - name: all
         service:
           - name: HTTP
+        schedule: always
