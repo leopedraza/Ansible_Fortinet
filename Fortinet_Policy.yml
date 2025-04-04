@@ -14,17 +14,12 @@
         name: Mypolicy
         action: accept
         srcintf:
-        - name: port1
-          q_origin_key: port1
+          - name: port1
         dstintf:
-        - name: port1
-          q_origin_key: port1
+          - name: port1
         srcaddr:
           - name: login.windows.net
-            q_origin_key: login.windows.net
         dstaddr:
           - name: all
-            q_origin_key: all
         service:
           - name: HTTP
-            q_origin_key: HTTP
