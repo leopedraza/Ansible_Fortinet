@@ -5,7 +5,6 @@
     name: policy_data
 
 - name: Configure Fortinet Firewall Policy
-  hosts: "{{ hosts }}"
   fortinet.fortios.fortios_firewall_policy:
     vdom: root 
     state: "present"
