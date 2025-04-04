@@ -1,25 +1,14 @@
 ---
+- name: Cargar archivo de política
+  include_vars:
+    file: "{{ _policy_file }}"
+    name: policy_data
 - name: Configure global attributes
   hosts: "{{ _hosts }}"
   connection: httpapi
   tasks:
    - name: Configure Fortinet Firewall Policy
      fortinet.fortios.fortios_firewall_policy:
-      vdom: root  #"{{ _vdom }}"
+      vdom: root 
       state: "present"
-      firewall_policy:
-        policyid: 1
-        status: enable
-        name: Mypolicy
-        action: accept
-        srcintf:
-          - name: port1
-        dstintf:
-          - name: port1
-        srcaddr:
-          - name: login.windows.net
-        dstaddr:
-          - name: all
-        service:
-          - name: HTTP
-        schedule: always
+      firewall_policy: "{{ policy_data.firewall_policy }}"

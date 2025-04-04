@@ -1,0 +1,10 @@
+firewall_policy:
+  name: "Allow Web"
+  policyid: 2001
+  srcintf: [{"name": "port1"}]
+  dstintf: [{"name": "port1"}]
+  srcaddr: [{"name": "all"}]
+  dstaddr: [{"name": "all"}]
+  action: "accept"
+  schedule: "always"
+  service: [{"name": "HTTP"}, {"name": "HTTPS"}]
