@@ -1,8 +1,8 @@
 - name: Aplicar políticas al FortiGate desde Git
   gather_facts: no
-  hosts: "{{ _hosts }}"
   connection: httpapi
   roles:
     - role: firewall_policy
       vars:
+        hosts: "{{ _hosts }}"
         policy_file: "{{ _policy }}"
