@@ -6,6 +6,6 @@
 
 - name: Configure Fortinet Firewall Policy
   fortinet.fortios.fortios_firewall_policy:
-  vdom: root 
-  state: "present"
-  firewall_policy: "{{ policy_data.firewall_policy }}"
+    vdom: root 
+    state: "present"
+    firewall_policy: "{{ policy_data.firewall_policy }}"
