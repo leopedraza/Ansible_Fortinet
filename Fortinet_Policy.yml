@@ -1,8 +1,9 @@
 ---
-- name: Cargar archivo de política
-  include_vars:
-    file: "{{ _policy_file }}"
+- name: Load policy file
+  ansible.builtin.include_vars:
+    file: '{{_policy_file}}.yml'
     name: policy_data
+
 - name: Configure global attributes
   hosts: "{{ _hosts }}"
   connection: httpapi
