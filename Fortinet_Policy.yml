@@ -9,7 +9,6 @@
       state: "present"
       firewall_policy:
         policyid: 1
-        q_origin_key: 1
         status: enable
         name: Mypolicy
         action: accept
