@@ -5,6 +5,7 @@
   tasks:
    - name: Configure Fortinet Firewall Hostname
      fortinet.fortios.fortios_system_global:
+       enable_log: true
        vdom: root
        system_global:
          hostname: "{{ _hostname }}"
