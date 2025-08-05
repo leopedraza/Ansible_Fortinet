@@ -9,5 +9,6 @@
             hostname: "{{ _hostname }}"
      register: resultado
 
-  - debug:
-    var: resultado
+  - name: Mostrar resultado
+    debug:
+      var: resultado
