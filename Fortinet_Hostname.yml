@@ -7,3 +7,7 @@
      fortinet.fortios.fortios_system_global:
         system_global:
             hostname: "{{ _hostname }}"
+  register: resultado
+
+- debug:
+    var: resultado
